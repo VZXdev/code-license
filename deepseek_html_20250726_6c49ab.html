@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическая оферта JealStudio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #e0e0e0;
+            background-color: #0a0a1a;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(41, 128, 185, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(231, 76, 60, 0.1) 0%, transparent 20%);
+        }
+        h1 {
+            color: #4fc3f7;
+            text-align: center;
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #64b5f6;
+            margin-top: 30px;
+            border-left: 4px solid #2196f3;
+            padding-left: 15px;
+            text-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .company-name {
+            font-weight: bold;
+            color: #ff5252;
+            text-shadow: 0 0 8px rgba(255, 82, 82, 0.4);
+        }
+        .signature {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed #444;
+        }
+        .highlight {
+            background-color: rgba(30, 30, 60, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn-agree {
+            background: linear-gradient(135deg, #00c853, #64dd17);
+            color: white;
+        }
+        .btn-disagree {
+            background: linear-gradient(135deg, #d50000, #ff1744);
+            color: white;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid #4fc3f7;
+            box-shadow: 0 0 25px rgba(79, 195, 247, 0.4);
+        }
+        .close-modal {
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #4fc3f7;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .rocket {
+            position: fixed;
+            right: -100px;
+            bottom: 20px;
+            font-size: 50px;
+            animation: fly 15s linear infinite;
+            transform: rotate(-45deg);
+            opacity: 0.7;
+        }
+        @keyframes fly {
+            0% { right: -100px; bottom: 20px; }
+            100% { right: 100%; bottom: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="rocket"><img src=""></img></div>
+
+    <div class="header">
+        <h1>ПУБЛИЧНАЯ АФЕРТА</h1>
+        <p>Цифровых услуг от компании <span class="company-name">JealStudio</span></p>
+    </div>
+    
+    <h2>1. Общие положения</h2>
+    <div class="highlight">
+        <p>1.1. Настоящая публичная оферта (далее — «Оферта») является официальным предложением <strong>ИП Попугаев Артем Сергеевич</strong> (далее — «Продавец»), действующего под торговой маркой <strong>JealStudio</strong>, заключить договор купли-продажи цифровых товаров и услуг в игре <strong>Roblox</strong> на условиях, изложенных ниже.</p>
+        <p>1.2. Полным и безоговорочным принятием (акцептом) данной Оферты считается совершение Покупателем оплаты товара в системе <strong>Roblox</strong> (в валюте <strong>Robux</strong>).</p>
+    </div>
+    <h2>2. Термины и определения</h2>
+    <div class="highlight">
+        <p><strong>2.1. Продавец</strong> — ИП Попугаев Артем Сергеевич, представляющий компанию <strong>JealStudio</strong>, осуществляющий продажу цифровых товаров и услуг в игре Roblox.</p>
+        <p><strong>2.2. Покупатель</strong> — любое физическое или юридическое лицо, совершившее оплату товара в Robux и принявшее условия данной Оферты.</p>
+        <p><strong>2.3. Цифровой товар/услуга</strong> — виртуальные предметы, внутриигровые валюты, доступы, скрипты, модели, гайды и иные нематериальные активы, предоставляемые в игре Roblox.</p>
+        <p><strong>2.4. Robux</strong> — внутриигровая валюта Roblox, используемая для оплаты товаров в данном магазине.</p>
+    </div>
+
+    <h2>3. Предмет Оферты</h2>
+    <div class="highlight">
+        <p>3.1. Продавец обязуется передать Покупателю цифровой товар/услугу, а Покупатель обязуется оплатить его в валюте <strong>Robux</strong> в соответствии с выбранным товаром и условиями Оферты.</p>
+    </div>
+    <h2>4. Порядок оформления и оплаты</h2>
+    <div class="highlight">
+        <p>4.1. Покупатель выбирает товар в магазине JealStudio (официальный сайт, Discord-сервер, группа в социальных сетях или иные платформы).</p>
+        <p>4.2. Оплата производится <strong>только в Robux</strong> через официальные системы Roblox (групповые фонды, покупка через игру, переводы и т. д.).</p>
+        <p>4.3. После оплаты Покупатель обязан предоставить подтверждение (скриншот, логи транзакции).</p>
+        <p>4.4. Доставка товара осуществляется в срок до <strong>24 часов</strong> после подтверждения оплаты.</p>
+    </div>
+    <h2>5. Права и обязанности сторон</h2>
+    <div class="highlight">
+        <p><strong>5.1. Продавец обязан:</strong></p>
+        <ul>
+            <li>Предоставить товар в соответствии с описанием.</li>
+            <li>Обеспечить консультационную поддержку.</li>
+            <li>Возвращать средства в случае непоставки товара (по согласованию).</li>
+        </ul>
+    </div>
+    <p><strong>5.2. Покупатель обязан:</strong></p>
+    <div class="highlight">
+        <ul>
+            <li>Оплатить товар в полном объеме.</li>
+            <li>Не передавать полученные товары третьим лицам в коммерческих целях.</li>
+            <li>Следовать правилам Roblox и не использовать товары для мошенничества.</li>
+        </ul>
+    </div>
+    <h2>6. Ответственность</h2>
+    <div class="highlight">
+        <p>6.1. Продавец не несет ответственности за:</p>
+        <ul>
+            <li>Изменения в политике Roblox, ведущие к ограничению функционала товара.</li>
+            <li>Неправомерное использование товара Покупателем.</li>
+            <li>Утрату доступа к аккаунту Roblox по вине Покупателя.</li>
+        </ul>
+        <p>6.2. Все споры решаются путем переговоров. В случае невозможности урегулирования — в соответствии с законодательством РФ.</p>
+    </div>
+    <h2>7. Реквизиты Продавца</h2>
+    <div class="highlight">
+        <p><strong>ИП Попугаев Артем Сергеевич</strong></p>
+        <p>Торговая марка: <strong>JealStudio</strong></p>
+        <p>Способы связи:</p>
+        <p>TikTok: @JealLeal</p>
+        <p>YouTube: @JealLeal</p>
+        <p>Telegram: @JealLeal</p>
+        <p>Roblox: @KristopherJL</p>
+    </div>
+
+    <div class="signature">
+        <p><strong>Акцепт Оферты</strong> происходит в момент оплаты товара или нажатия кнопки "Соглашаюсь".</p>
+        <p>Дата публикации: ___________</p>
+        <p>© JealStudio, 2024. Все права защищены.</p>
+    </div>
+
+    <div class="buttons">
+        <button class="btn btn-agree" id="agreeBtn">СОГЛАШАЮСЬ</button>
+        <button class="btn btn-disagree" id="disagreeBtn">НЕ СОГЛАШАЮСЬ</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 style="color: #64ffda;">Внимание!</h3>
+            <p>Использование наших услуг возможно только при принятии условий оферты.</p>
+            <p>Если вы не согласны с условиями, к сожалению, мы не сможем предоставить вам доступ к нашему ассортименту товаров/услуг.</p>
+            <button class="close-modal" id="closeModal">Понятно</button>
+        </div>
+    </div>
+
+    <script>
+
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starsCount = 100;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+
+                const size = Math.random() * 3;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const duration = 5 + Math.random() * 10;
+                const delay = Math.random() * 5;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${posX}%`;
+                star.style.top = `${posY}%`;
+                star.style.setProperty('--duration', `${duration}s`);
+                star.style.animationDelay = `${delay}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+
+        document.getElementById('agreeBtn').addEventListener('click', function() {
+            window.location.href = 'https://t.me/QuasarShopBot';
+        });
+        
+        document.getElementById('disagreeBtn').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'flex';
+        });
+        
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'none';
+        });
+        
+
+        window.onload = createStars;
+    </script>
+</body>
+</html>
